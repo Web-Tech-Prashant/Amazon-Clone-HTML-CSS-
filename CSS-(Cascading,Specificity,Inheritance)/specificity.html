@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        /* Low specifity */
+        /* .favorite{
+            color:red;
+            font-weight: bold;
+        } */
+
+         /* High Specificity  */
+        ul#summer-drinks li.favorite{
+            color:red;
+            font-weight: bold;
+        }
+
+   
+        ul#summer-drinks li{
+                font-size: 12px;
+                font-weight: normal;
+                color:black;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <ul id="summer-drinks">
+        <li>Mountain Dew</li>
+        <li>Sprite</li>
+        <li class="favorite">Appy Fiz</li>
+    </ul>
+</body>
+</html>
