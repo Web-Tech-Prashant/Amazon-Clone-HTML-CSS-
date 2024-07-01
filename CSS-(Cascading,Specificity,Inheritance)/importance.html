@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* without important keyword in cass */
+        /* Note: W/O important specificity of css is inline means highest priority will go to inline css*/
+        .important{
+            color:blue;
+        }
+        /* with important keyword in css */
+         /* Note: With important specificity of css is not inline means highest priority will go to css with important keyword*/
+        
+         .important{
+            color:blue !important;
+        }
+    </style>
+  </head>
+  <body>
+    <p style="color: red;" class="important">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus
+      soluta saepe iure nesciunt fugiat qui! Dolorem quidem neque nihil unde.
+    </p>
+  </body>
+</html>
