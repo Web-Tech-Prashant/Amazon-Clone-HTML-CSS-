@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 160px;
+            height: 80px;
+            padding: 20px;
+            border: 8px solid red;
+            background: yellow;
+        }
+        /* Note: we don't add or subtact margin only border and padding gets updated */
+        .content-box{
+            /* Note: If we are using box-sizing:content-box -> then It calculates the width and height of the div
+            In this eg. box width = 160(width)+ 20*2(padding-left & padding-right) + 8*2(border-left & border-right);
+            Total_Width = 160 + 40 +16 = 216px
+            Total_height = 80 + 2*20(padding-top & padding-bottom) + 2*8(border-top & border-bottom)= 
+                          80 + 40 + 16= 136px
+            */
+            /* Here we add the pixels value  */
+            box-sizing:content-box;
+        }
+        .border-box{
+                        /* Note: If we are using box-sizing:content-box -> then It calculates the width and height of the div
+            In this eg. box width = 160(width) - 20*2(padding-left & padding-right) - 8*2(border-left & border-right);
+            Total_Width = 160 - 40 - 16 = 104px
+            Total_height = 80 - 2*20(padding-top & padding-bottom) - 2*8(border-top & border-bottom)= 
+                          80 - 40 - 16= 24px
+            */
+            /* Here we subtract the pixels value 
+             */
+            box-sizing:border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        Content Box
+    </div>
+    <br>
+    <div class="border-box">
+        Border Box
+    </div>
+    <br>
+</body>
+</html>

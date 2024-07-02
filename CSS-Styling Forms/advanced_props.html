@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* clip path generator: we can apply img with different shapes using clip-path property in css:
+           Ref- type clip path generator in chrome and use any link to copy the clip-path value from there.
+            */
+        div{
+            text-align: center;
+            background-color: rgba(73, 74, 87, 0.248);
+            /* clip-path: circle(50% at 50% 50%); */
+        }
+        img{
+           margin: 150px;
+            height: 175px;
+        }
+        .clip-circle{
+            /* clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); */
+            /* clip-path: circle(50% at 50% 50%); */
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img class="clip-circle" src="Images/pic1.jpg">
+    </div>
+   
+</body>
+</html>

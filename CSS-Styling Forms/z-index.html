@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* z-index: we use z-index to display that content on top or want to highlight that content first. 
+            It is decided based on z-index value. like if z-index:1; z-index:2; z-index-3
+            so here we can see based on highest value priority goes to that content first and it will appear on top
+            we can also give z-index value in -ve like z-index:-1 -> then it will disappear from the top position and it will
+            go to the bottom.
+        */
+        div#layer1{
+            z-index:1;
+            position: absolute;
+            left:8px;
+            width: 250px;
+            height: 120px;
+            background-color: orange;
+            border: 1px solid blue;
+            padding:5px;   
+        }
+        div#layer2{
+            z-index: 2;
+            position: absolute;
+            left:25px;
+            width: 250px;
+            height: 120px;
+            background-color: green;
+            border: 1px solid gray;
+            padding:5px;   
+        }
+        div#layer3{
+            z-index:3;
+            position: absolute;
+            left:45px;
+            width: 250px;
+            height: 120px;
+            background-color: palevioletred;
+            border: 1px solid purple;
+            padding:5px;   
+        }
+    </style>
+</head>
+<body>
+    <div id="layer1">
+        Layer1...
+    </div>
+    <div id="layer2">
+        Layer2...
+    </div>
+    <div id="layer3">
+        Layer3...
+    </div>
+</body>
+</html>
